@@ -2,6 +2,7 @@ package com.zhadraoui.swagger.model;
 
 
 import lombok.Data;
+import org.springframework.data.jpa.repository.Modifying;
 
 import javax.persistence.*;
 

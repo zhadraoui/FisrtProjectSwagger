@@ -25,18 +25,23 @@ public class EmployeeController {
         );
     }
 
+    //http://localhost:8080/api/show
     @GetMapping("/show")
-    public ResponseEntity<Employee> show(@RequestParam int id) {
+    public ResponseEntity<Employee> show(@RequestParam Long id) {
         return ResponseEntity.status(HttpStatus.OK).body(
-                employeeRepository.findById((long) id).get()
+                employeeRepository.findById(id).get()
         );
     }
 
+
+    //http://localhost:8080/api/delete
     @DeleteMapping("/delete")
-    public void delete(@RequestParam int id) {
-        employeeRepository.deleteById((long) id);
+    public void delete(@RequestParam Long id) {
+        employeeRepository.deleteById(id);
     }
 
+
+    //http://localhost:8080/api/edit
     @PutMapping("/edit")
     public void edit(@RequestBody Employee employee) {
         employeeRepository.save(employee);
