@@ -3,12 +3,16 @@ package com.zhadraoui.swagger.controller;
 
 import com.zhadraoui.swagger.model.Employee;
 import com.zhadraoui.swagger.repository.EmployeeRepository;
+import io.swagger.annotations.Api;
+import io.swagger.v3.oas.annotations.tags.Tag;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.http.HttpStatus;
 import org.springframework.http.ResponseEntity;
 import org.springframework.web.bind.annotation.*;
 
 
+@Api(value = " Hidden Value",description = "Valleur Afficher comme discription")
+@Tag(name = "Nom Afficher")
 @RestController
 @RequestMapping("/api")
 // http://localhost:8080/api
